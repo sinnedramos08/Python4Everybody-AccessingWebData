@@ -13,10 +13,10 @@ mysock.send(command_GET)
 #Ready to get data from the socket after the GET request
 
 while True:
-    data=mysock.recv(1024) #Receive data from the socket, max size is 512 bytes
+    data=mysock.recv(512) #Receive data from the socket, max size is 512 bytes
     if (len(data)<1):
         break
-    print(data) #Decode the data (without \r \n and other special characters)
+    print(data.decode()) #Decode the data (without \r \n and other special characters)
 
 
 
